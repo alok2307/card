@@ -1,1 +1,223 @@
 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Image round</title>
+    <!-- <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    /> -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-image: url(bg3.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        -webkit-perspective: 800px;
+      }
+      .card {
+        position: relative;
+        margin: 0 auto;
+        width: 250px;
+        height: 470px;
+        text-align: center;
+        background: rgb(255, 255, 255);
+        border-radius: 10px;
+        border: 1px solid #000;
+        margin-top: 40px;
+        padding: 5px;
+        box-shadow: 0 15px 20px rgba(0, 0, 0, 0.7);
+      }
+      .box {
+        position: relative;
+        margin: 0 auto;
+        width: 250px;
+        height: 350px;
+        cursor: pointer;
+      }
+      .box:hover {
+        -webkit-transform: rotateY(-180deg);
+      }
+      .box div {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        color: aliceblue;
+        text-align: center;
+        line-height: 350px;
+        position: absolute;
+        -webkit-backface-visibility: hidden;
+      }
+      .card1 {
+        background-image: url(img.jpg);
+        background-size: cover;
+        z-index: 100;
+      }
+      .card2 {
+        background-image: url(img2.jpg);
+        -webkit-transform: rotateY(-180deg);
+      }
+      .box {
+        transition: -webkit-transform 1s ease-in;
+        -webkit-transform-style: preserve-3d;
+      }
+      h5 {
+        color: rgb(242, 240, 245);
+        text-align: center;
+        font-size: 25px;
+        transform: rotateZ(-50deg);
+      }
+      hr {
+        background: #000;
+        height: 1px;
+        margin-top: 4px;
+      }
+      .link {
+        font-size: 14px;
+        font-style: none;
+        font-family: cursive;
+        text-transform: none;
+        text-decoration: none;
+        padding-bottom: 5px;
+        overflow: hidden;
+        display: block;
+        padding: 0;
+        text-align: left;
+      }
+      a {
+        text-decoration: none;
+        color: #000000;
+        font-family: Arial, Helvetica, sans-serif;
+        display: block;
+        padding: 2px;
+      }
+      .stare {
+        line-height: normal;
+        display: inline-block;
+        color: #fff;
+        padding: 2px 4px 2px 6px;
+        border-radius: 3px;
+        font-weight: 500;
+        font-size: 12px;
+        vertical-align: middle;
+        background-color: #388e3c;
+        text-align: left;
+      }
+      .no {
+        padding-left: 8px;
+        font-weight: 500;
+        color: #878787;
+      }
+      .rate {
+        display: inline-block;
+        padding: 0 10px 0 0;
+        margin: 3px 0;
+        text-align: left;
+        padding: 0px;
+      }
+      .all {
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 500;
+        color: #212121;
+        text-align: left;
+        padding: 0;
+        margin: 0;
+      }
+      .r399 {
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 500;
+        color: #212121;
+      }
+      .r799 {
+        display: inline-block;
+        margin-left: 8px;
+        text-decoration: line-through;
+        color: #878787;
+      }
+      .roff {
+        color: #388e3c;
+        font-size: 15px;
+        letter-spacing: -0.2px;
+        font-weight: 500;
+      }
+      .btn {
+        color: white;
+        background: #388e3c;
+        font-size: 15px;
+        letter-spacing: -0.2px;
+        font-weight: bold;
+        padding: 3px;
+        width: 180px;
+        height: 20px;
+        border-radius: 20px;
+        cursor: pointer;
+        margin: auto;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+      }
+      .btn:hover {
+        color: white;
+        background: #4686e6;
+        font-size: 15px;
+        letter-spacing: -0.2px;
+        font-weight: bold;
+        padding: 3px;
+        width: 180px;
+        height: 20px;
+        border-radius: 20px;
+        cursor: pointer;
+        margin: auto;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+      }
+      .cart {
+        display: inline-block;
+        float: right;
+        padding-left: 10px;
+        padding-right: 30px;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="box">
+        <div class="card1"><h5>hover me</h5></div>
+        <div class="card2"></div>
+      </div>
+      <hr />
+      <div class="link">
+        <a href="#">Flipkart SmartBuy Turbo Wireless Mouse</a>
+      </div>
+      <div class="stare">4.5 <i class="fa fa-star"></i></div>
+      <span class="no">(611)</span>
+      <br />
+      <div class="rate">
+        <div class="all">
+          <div class="r399">₹399</div>
+          <div class="r799">₹799</div>
+          <span class="roff">50% off</span>
+        </div>
+      </div>
+      <div class="cart"><i class="fa fa-cart-plus"></i></div>
+      <div class="btn">BUY NOW</div>
+    </div>
+  </body>
+</html>
